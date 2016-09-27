@@ -13,15 +13,15 @@ The Project
 
 In this problem we try to solve a multiclass classification problem. The dataset is made with 214 samples and 9 different features. The dataset looks like:
 
-![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/head.jpg)
+![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/img/head.jpg)
 
 We see that not all features are normalized, so the first step is to normalize and center them by applying:
 
-$Y=F(X)$
+x = (x-sum(x)/n)/(max(x)-min(x))
 
 The resulted dataset looks like:
 
-![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/normalized_head.jpg)
+![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/img/normalized_head.jpg)
 
- To solve this problem I suggested to solve it using a one-vs-all approach. For this approach you 
+In this way, each feature will have the same weight on the learning process.
 
