@@ -13,7 +13,7 @@ The Project
 
 In this problem we try to solve a multiclass classification problem. The dataset is made with 214 samples and 10 different features. The dataset looks like:
 
-![alt tag](http://url/to/img.png)
+![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/head.png)
 
 We see that not all features are normalized, so the first step is to normalize and center them by applying:
 
