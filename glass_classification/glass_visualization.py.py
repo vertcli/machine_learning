@@ -1,8 +1,3 @@
-
-# coding: utf-8
-
-# In[3]:
-
 # Import the required libraries:
 import pandas as pd
 import seaborn as sns

@@ -1,8 +1,3 @@
-
-# coding: utf-8
-
-# In[18]:
-
 #######################################################
 # Author: Albert Climent Bigas (vert.cli@gmail.com)
 # Description: PCA analysis over Glass Identification
@@ -29,8 +24,6 @@ pca.fit(x)
 sns.barplot(range(9), np.sort(np.diagonal(pca.get_covariance()))[::-1], palette="BuGn_d")
 plt.show()
 
-
-# In[ ]:
 
 
 
