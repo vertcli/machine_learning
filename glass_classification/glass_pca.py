@@ -24,6 +24,9 @@ pca.fit(x)
 sns.barplot(range(9), np.sort(np.diagonal(pca.get_covariance()))[::-1], palette="BuGn_d")
 plt.show()
 
+# Save the figure:
+plt.figure().savefig("img/pca_variances.png")
+
 
 
 

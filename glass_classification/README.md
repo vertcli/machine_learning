@@ -7,19 +7,19 @@ The aim of this project is to deal with a multiclass classification problem usin
 Installation
 ----------------------
 
-### Download the data (Optional)
+### Install the requirements
+ 
+* Install the requirements using `pip install -r requirements.txt`.
+    * Make sure you use Python 2.
+    * You may want to use a virtual environment for this.
+    
+### Download the data
 
 * Clone this repo to your computer.
 * Get into the folder using `cd glass_classification`.
 * Run `mkdir data`.
 * Run `python glass_data_reader.py`.
     * This will create `raw_glass.csv` in the `data` folder.
-
-### Install the requirements
- 
-* Install the requirements using `pip install -r requirements.txt`.
-    * Make sure you use Python 2.
-    * You may want to use a virtual environment for this.
 
 Usage
 -----------------------

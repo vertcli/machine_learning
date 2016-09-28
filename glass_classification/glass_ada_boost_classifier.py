@@ -1,8 +1,3 @@
-
-# coding: utf-8
-
-# In[1]:
-
 #######################################################
 # Author: Albert Climent Bigas (vert.cli@gmail.com)
 # Description: ML script using Adaptive Boosting algorithm to 
@@ -76,8 +71,8 @@ pd_accuracy = pd_accuracy.astype(float)
 ax = sns.boxplot(x='n_estimators', y='accuracy', data=pd_accuracy)
 plt.show()
 
-
-# In[4]:
+# Save the figre:
+plt.figure().savefig("img/adaboost_n_classifiers_vs_accuracy.png")
 
 
 
