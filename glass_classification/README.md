@@ -11,18 +11,15 @@ Requirements
 Installation
 ----------------------
 
-### Install the requirements
+### Create the environment and install the requirements
  
-* Install the requirements using `pip install -r requirements.txt`.
+* Clone this repo to your computer by typing `git clone https://github.com/vertcli/machine_learning.git`.
+* Get into the folder using `cd machine_learning/glass_classification`.
+* Create a python environment using `conda create --name glass_classification --file requirements.txt python=2`.
     
 ### Download the data
 
-* Clone this repo to your computer: `git clone https://github.com/vertcli/machine_learning.git`
-* Get into the folder using `cd machine_learning/glass_classification`.
-FALTA!!!!!
-To activate this environment, use:
-# $ source activate glass_classification
-
+* Activate this environment: `source activate glass_classification`.
 * Run `mkdir data`.
 * Run `python glass_data_reader.py`.
     * This will create `raw_glass.csv` in the `data` folder.
