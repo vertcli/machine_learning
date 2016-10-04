@@ -13,9 +13,10 @@ print('Processing data...')
 pd_glass = pd.read_csv('data/raw_data.csv')
 
 # We visualize a pair plot with all features vs all features so we can see if it is possible to split between classes
-pd_glass = (pd_glass - pd_glass.mean()) / (pd_glass.max() - pd_glass.min())
+feature_names=['RI','Na','Mg','Al','Si','K','Ca','Ba','Fe']
+pd_glass[feature_names] = (pd_glass[feature_names] - pd_glass[feature_names].mean()) / (pd_glass[feature_names].max() - pd_glass[feature_names].min())
 
-pd_glass.to_csv('processed/data.csv')
+pd_glass.to_csv('processed/data.csv', index = False)
 
 print('Done. Processed dataset head:')
 print(pd_glass.head(5))

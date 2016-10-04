@@ -22,7 +22,8 @@ Installation
 * Activate this environment: `source activate glass_classification`.
 * Run `mkdir data`.
 * Run `python glass_data_reader.py`.
-    * This will create `raw_glass.csv` in the `data` folder.
+    * This will create `raw_glass.csv` in the `data` folder. The data will look like:
+    ![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/img/raw_data.jpg)
 
 Usage
 -----------------------
@@ -30,7 +31,8 @@ Usage
 * If you are not already in glass_classification folder get into it. Also, make sure you have glass_classification environment active.
 * Run `mkdir processed` to create a directory for our processed datasets.
 * Run `python glass_process_data.py` normalize and center the dataset.
-    * This will create `data.csv` in the `processed` folder.
+    * This will create `data.csv` in the `processed` folder. The data will look like:
+    ![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/img/processed_data.jpg)
 * Run `mkdir img` to create a directory to save the plots as images.    
 * Run `python glass_pca.py`.
     * This will show up the variance of each feature in the new space. Notice that the first and second axis are the ones with more variance.

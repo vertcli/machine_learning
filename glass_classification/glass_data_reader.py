@@ -25,7 +25,7 @@ glass = np.delete(glass,0,1)
 pd_glass = dataset_to_dataframe(glass, feature_names=['RI','Na','Mg','Al','Si','K','Ca','Ba','Fe','Type'])
 
 # Save the data to our system:
-pd_glass.to_csv('data/raw_data.csv')
+pd_glass.to_csv('data/raw_data.csv', index = False)
 
 print('Done. Dataset head:')
 print(pd_glass.head(5))
