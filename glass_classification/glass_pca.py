@@ -5,10 +5,10 @@
 ######################################################
 
 # Import the required libraries:
-from sklearn import decomposition
+#from sklearn import decomposition
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
+#import seaborn as sns
 
 # Read the processed data:
 glass = np.genfromtxt('processed/data.csv', delimiter=',')
@@ -17,15 +17,15 @@ x = np.delete(glass,9,1)
 y = glass[:,9]
 
 # Perform PCA over our data:
-pca = decomposition.PCA()
-pca.fit(x)
+#pca = decomposition.PCA()
+#pca.fit(x)
 
 # Plot the covariances of our samples over the new frame:
-sns.barplot(range(9), np.sort(np.diagonal(pca.get_covariance()))[::-1], palette="BuGn_d")
-plt.show()
+#sns.barplot(range(9), np.sort(np.diagonal(pca.get_covariance()))[::-1], palette="BuGn_d")
+#plt.show()
 
 # Save the figure:
-plt.figure().savefig("img/pca_variances.png")
+#plt.figure().savefig("img/pca_variances.png")
 
 
 

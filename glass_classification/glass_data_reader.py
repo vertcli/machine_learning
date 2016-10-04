@@ -1,7 +1,8 @@
-
-# coding: utf-8
-
-# In[1]:
+#######################################################
+# Author: Albert Climent Bigas (vert.cli@gmail.com)
+# Description: Script to download Glass Identification
+# Classification dataset from url.
+#######################################################
 
 # Import the required libraries:
 import numpy as np
@@ -12,6 +13,8 @@ import urllib as url
 def dataset_to_dataframe(dataset, feature_names):
     df = pd.DataFrame(dataset, columns = feature_names)
     return df
+
+print('Downloading data...')
 
 # Load Glass Identification Dataset from UCI:
 raw_data = url.urlopen('https://archive.ics.uci.edu/ml/machine-learning-databases/glass/glass.data')
@@ -24,3 +27,4 @@ pd_glass = dataset_to_dataframe(glass, feature_names=['RI','Na','Mg','Al','Si','
 # Save the data to our system:
 pd_glass.to_csv('data/raw_data.csv')
 
+print('Done!')

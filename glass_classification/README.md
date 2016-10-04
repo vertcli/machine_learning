@@ -3,6 +3,10 @@ Glass Identification Classification
 
 The aim of this project is to deal with a multiclass classification problem using glass information. After training the algorithm we will predict which type of glass each sample have. The dataset used for this problem is public and can be found [here](https://archive.ics.uci.edu/ml/datasets/Glass+Identification) and it contains 214 samples and 9 features. As you can read in this link, the study of glass classification was motivated by criminological investigations (i.e. determining the type of glass left on a scene of a crime can be used as evidence).
 
+Requirements
+----------------------
+* You should have installed Anaconda on your system. If not, you can install it from [here](https://docs.continuum.io/anaconda/install).
+* Make sure you use Python 2.
 
 Installation
 ----------------------
@@ -10,13 +14,15 @@ Installation
 ### Install the requirements
  
 * Install the requirements using `pip install -r requirements.txt`.
-    * Make sure you use Python 2.
-    * You may want to use a virtual environment for this.
     
 ### Download the data
 
-* Clone this repo to your computer.
-* Get into the folder using `cd glass_classification`.
+* Clone this repo to your computer: `git clone https://github.com/vertcli/machine_learning.git`
+* Get into the folder using `cd machine_learning/glass_classification`.
+FALTA!!!!!
+To activate this environment, use:
+# $ source activate glass_classification
+
 * Run `mkdir data`.
 * Run `python glass_data_reader.py`.
     * This will create `raw_glass.csv` in the `data` folder.
