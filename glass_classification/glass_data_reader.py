@@ -27,4 +27,5 @@ pd_glass = dataset_to_dataframe(glass, feature_names=['RI','Na','Mg','Al','Si','
 # Save the data to our system:
 pd_glass.to_csv('data/raw_data.csv')
 
-print('Done!')
+print('Done. Dataset head:')
+print(pd_glass.head(5))
