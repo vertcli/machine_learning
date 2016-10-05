@@ -32,32 +32,20 @@ Usage
 * Run `mkdir processed` to create a directory for our processed datasets.
 * Run `python glass_process_data.py` normalize and center the dataset.
     * This will create `data.csv` in the `processed` folder. The data will look like:
-    ![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/img/processed_data.jpg)
-* Run `mkdir img` to create a directory to save the plots as images.    
+    ![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/img/processed_data.jpg)    
 * Run `python glass_pca.py`.
-    * This will show up the variance of each feature in the new space. Notice that the first and second axis are the ones with more variance.
+    * This will show up the variance of each feature in the new space. Notice that the first eigenvalue is the one with more variance, meaning that our data lives mainly in a line.
     * It will also export this plot into the `img` folder.
-* Run `python glass_visualization.py`.
+* OPTIONAL: Run `python glass_visualization.py`.
     * This will show up a pair-plot to see the correlation between the features of our dataset.
     * It will also export this plot into the `img` folder.
 * Run `python glass_ada_boost_classifier.py`.
-    * This will run one-vs-all adaptive boosting classifier with different number of classifiers. The dataset is divided into X folds and we do a cross validation across the folds. The output of the algorithm is one accuracy score for each training and a graph with box-plot of the accuracy vs the number of classifiers. Note: this graph is also exported to the `img` folder.
+    * This will run one-vs-all adaptive boosting classifier with different number of estimators. The dataset is divided into 10 folks and we do a cross validation across the folks. The output of the algorithm is one accuracy score for each training and a graph with box-plot of the accuracy vs the number of estimators. Note: this graph is also exported to the `img` folder.
 
-TODO
 Extending this
 -------------------------
 
 If you want to extend this work, here are a few places to start:
 
-* Generate more features in `annotate.py`.
-* Switch algorithms in `predict.py`.
-* Add in a way to make predictions on future data.
-* Try seeing if you can predict if a bank should have issued the loan.
-    * Remove any columns from `train` that the bank wouldn't have known at the time of issuing the loan.
-        * Some columns are known when Fannie Mae bought the loan, but not before
-    * Make predictions.
-* Explore seeing if you can predict columns other than `foreclosure_status`.
-    * Can you predict how much the property will be worth at sale time?
-* Explore the nuances between performance updates.
-    * Can you predict how many times the borrower will be late on payments?
-    * Can you map out the typical loan lifecycle?
+* You can explore how the algorithm behave with different number of estimators changing the file `settings.py`.
+* Change the base estimator ADA BOOST use.

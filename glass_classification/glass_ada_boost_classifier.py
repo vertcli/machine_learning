@@ -14,34 +14,36 @@ import numpy as np
 import seaborn as sns
 import unicodedata
 import pandas as pd
+import settings as st
 
 # Set numpy print options:
 np.set_printoptions(precision = 2)
 
+print('Reading data...')
 # Read the processed data:
-glass = np.genfromtxt('processed/data.csv', delimiter=',')
+pd_glass = pd.read_csv('data/processed_data.csv')
 
-x = np.delete(glass,9,1)
-y = glass[:,9]
-n = 10            # Number of iterations
-k = 10            # Number of folks
+#print(pd_glass.head(5))
+x = pd_glass.as_matrix(st.FEATURE_NAMES)
+y = pd_glass.as_matrix(['Type'])
 
 cols = ['n_estimators','accuracy']
 pd_accuracy = pd.DataFrame(columns=cols)
 
 # Define a vector values that contain all the 'c' parameters we are going to study:
-values = np.array([10,40,80])
+values = st.N_ESTIMATORS
 
 for index in values:
+    print('Trainging the algorithm with ' + str(index) + ' estimators...')
     # Define MultiLayer Perceptron Classifier class:
     classifier = mc.OneVsRestClassifier(abc(n_estimators=index))
     
     #Define the average accuracy over the folds:
-    accuracy = np.empty(n)
+    accuracy = np.empty(st.N_ITERATIONS)
     # Repeat the process and get the mean and std of the accuracy of this algorithm:
-    for i in range(n):
+    for i in range(st.N_ITERATIONS):
         # Define kFold:
-        kf = cv.KFold(len(x), n_folds = k, shuffle = True)
+        kf = cv.KFold(len(x), n_folds = st.N_FOLKS, shuffle = True)
 
         accuracy[i] = 0
 
@@ -54,7 +56,7 @@ for index in values:
             accuracy[i] += met.accuracy_score(y[test_intex], predicted)
 
         # Compute the average over the all folds:
-        accuracy[i] /=k
+        accuracy[i] /= st.N_FOLKS
 
         # Add the accuracy of this training to the list of accuracies:
         data = np.array([['',cols[0],cols[1]],[len(pd_accuracy),index,accuracy[i]]])
@@ -67,12 +69,19 @@ for index in values:
 # Convert the parameter 'c' and the 'accuracies' into floats:
 pd_accuracy = pd_accuracy.astype(float)
 
+print('Showing accuracy results...')
 # Plot the results:
 ax = sns.boxplot(x='n_estimators', y='accuracy', data=pd_accuracy)
+
+plt.xlabel('Number of estimators')
+plt.ylabel('Accuracy')
+plt.title('ADA Boost classifier results')
+figure = plt.gcf()
 plt.show()
 
 # Save the figre:
-plt.figure().savefig("img/adaboost_n_classifiers_vs_accuracy.png")
+figure.savefig("img/adaboost_n_classifiers_vs_accuracy.png")
 
+print('Done!')
 
 
