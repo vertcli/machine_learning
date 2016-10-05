@@ -29,9 +29,8 @@ Usage
 -----------------------
 
 * If you are not already in glass_classification folder get into it. Also, make sure you have glass_classification environment active.
-* Run `mkdir processed` to create a directory for our processed datasets.
 * Run `python glass_process_data.py` normalize and center the dataset.
-    * This will create `data.csv` in the `processed` folder. The data will look like:
+    * This will create `processed_data.csv` in the `data` folder. The data will look like:
     ![alt tag](https://github.com/vertcli/machine_learning/blob/master/glass_classification/img/processed_data.jpg)    
 * Run `python glass_pca.py`.
     * This will show up the variance of each feature in the new space. Notice that the first eigenvalue is the one with more variance, meaning that our data lives mainly in a line.
