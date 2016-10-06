@@ -12,7 +12,13 @@ At this point we know some caracteristics of our dataset (i.e. two classes, more
 Projects
 --------
 
-This portfolio is made of several ML mini-projects with the aim to show my skills on this field. All the datasets are from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.html) where you can find up to 351 open datasets. The first project is called [Glass Identification Classification](https://github.com/vertcli/machine_learning/tree/master/glass_identification_classification), which is based on the dataset with the same name.
+This portfolio is made of several ML mini-projects with the aim to show my skills on this field. All the datasets are from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.html) where you can find up to 351 open datasets. The list of projects is the following:
+
+1. [Glass Identification Classification](https://github.com/vertcli/machine_learning/tree/master/glass_identification_classification) is based on the dataset with the same name. This is a multiclass problem in which I implement a one-vs-all solution using Adaptive Boosting algorithm (ADA Boost).
+
+2. [Pima Indians Onset Of Diabetes](https://github.com/vertcli/machine_learning/tree/master/pima_indians_onset_of_diabetes) is a two class classification problem. The algorithm trained in this case was a Logistic Regression Classifier in which I modify the parameter C to check whether the algorithm is underfitting or overfitting.
+
+
 
 
 
