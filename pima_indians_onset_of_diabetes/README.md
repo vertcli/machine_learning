@@ -39,7 +39,7 @@ Usage
     * This will show up a pair-plot to see the correlation between the features of our dataset.
     * It will also export this plot into the `img` folder.
 * Run `python glass_ada_boost_classifier.py`.
-    * This will run one-vs-all adaptive boosting classifier with different number of estimators. The dataset is divided into 10 folds and we do a cross validation across the folds. The output of the algorithm is one accuracy score for each training and a graph with box-plot of the accuracy vs the number of estimators. Note: this graph is also exported to the `img` folder.
+    * This will run one-vs-all adaptive boosting classifier with different number of estimators. The dataset is divided into 10 folks and we do a cross validation across the folks. The output of the algorithm is one accuracy score for each training and a graph with box-plot of the accuracy vs the number of estimators. Note: this graph is also exported to the `img` folder.
 
 Extending this
 -------------------------
