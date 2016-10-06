@@ -6,13 +6,13 @@ When you want to deal with a machine learning problem a best practice is to spli
 
 ![alt tag](https://github.com/vertcli/images/blob/master/ML_flow.jpg)	
 
-In the first step we choose which variables can affect our problem and which ones may be irrelevant. Ones the set of variables (features) are known we capture our raw data. Usualy, this data can not be processed directly by our Machine Learning algorithms and have to be preprocessed in a data processing step (i.e. normalize, center, etc.). It is also recomended to plot it so we a first visualization of the dataset. It can be interesting to perform a PCA analysis to see how correlated our data is.
-After this step is performed, we have to train our learning algorithm. We usualy split our dataset into different folds to do cross-validation and see how well our algorithm is performing. All this information should then be summarized in a small document, in which you may also want to include some images or graphs of the results. You may also want to include a small discussion of the furure work/outgoing lines.
+In the first step we choose which variables can affect our problem and which ones may be irrelevant. These variables are known as features and each measurement is known as sample. Usualy, is best practice to process the raw data so each feature is normalized and has the same weight when training our Machine Learning algorithm. It is also recomended to plot it so we can see how our data is distributed. Finally, it can be also interesting to perform a PCA analysis to see how correlated our data is in this second phase of the problem.
+At this point we know some caracteristics of our dataset (i.e. two classes, more than two classes, unknown classes, strongly correlated data, number of independent features, etc.) so it is time to look for a candidate algorithm or to try to create more features (i.e. polynomial features). To train the chosen algorithm it is recommended to split our dataset into different folds to do cross-validation and see how well our algorithm is performing. This cross validation will be as part of the test phase, when we validate if our algorithm is performing as desired. Most of the algorithms have parameters to tune, so you can train different models with different parameters and observe how it behave. Some graphs or figures may help you visualize the performance of the different algorithms and you can comment them. This will help you to understand what is really happening. You may also want to add to the project a small discussion of the furure work/outgoing lines so other people may help you to improve your results.
 
-The Project
-===========
+Projects
+--------
 
-In this problem we try to solve a multiclass classification problem. The dataset is made with 214 samples and 9 different features. The dataset looks like:
+This portfolio is made of several ML mini-projects with the aim to show my skills on this field. The first one is called Glass Identification Classification, which is based on the UCI dataset with the same name.
 
 
 
