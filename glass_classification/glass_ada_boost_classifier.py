@@ -16,6 +16,10 @@ import unicodedata
 import pandas as pd
 import settings as st
 
+def cross_validation(classifier,x,y,train,test):
+    classifier.fit(x[train],y[train])
+    return (met.accuracy_score(y[test], classifier.predict(x[test])))
+
 # Set numpy print options:
 np.set_printoptions(precision = 2)
 
@@ -40,6 +44,7 @@ for index in values:
     
     #Define the average accuracy over the folds:
     accuracy = np.empty(st.N_ITERATIONS)
+
     # Repeat the process and get the mean and std of the accuracy of this algorithm:
     for i in range(st.N_ITERATIONS):
         # Define kFold:
@@ -49,11 +54,7 @@ for index in values:
 
         # Train the algorithm and cross validate it:
         for train_index, test_intex in kf:
-            classifier.fit(x[train_index],y[train_index])
-            predicted = classifier.predict(x[test_intex])
-
-            # Add the accuracy of this field to the mean:
-            accuracy[i] += met.accuracy_score(y[test_intex], predicted)
+            accuracy[i] += cross_validation(classifier, x, y, train_index, test_intex)
 
         # Compute the average over the all folds:
         accuracy[i] /= st.N_FOLDS

@@ -16,6 +16,10 @@ import pandas as pd
 import settings as st
 import time
 
+def cross_validation(classifier,x,y,train,test):
+    classifier.fit(x[train],y[train].ravel())
+    return (met.accuracy_score(y[test], classifier.predict(x[test])))
+
 # Set numpy print options:
 np.set_printoptions(precision = 2)
 
@@ -50,11 +54,8 @@ for index in values:
 
         # Train the algorithm and cross validate it:
         for train_index, test_intex in kf:
-            logreg.fit(X=x[train_index],y=y[train_index].ravel())
-            predicted = logreg.predict(x[test_intex])
-
             # Add the accuracy of this field to the mean:
-            accuracy[i] += met.accuracy_score(y[test_intex], predicted)
+            accuracy[i] += cross_validation(logreg,x,y,train_index,test_intex)
 
         # Compute the average over the all folds:
         accuracy[i] /= st.N_FOLDS

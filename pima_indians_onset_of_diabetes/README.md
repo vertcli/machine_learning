@@ -23,7 +23,7 @@ Installation
 * Run `mkdir data`.
 * Run `python diabetes_data_reader.py`.
     * This will create `raw_diabetes.csv` in the `data` folder. The data will look like:
-    ![alt tag](https://github.com/vertcli/machine_learning/blob/master/pima_indians_onset_of_diabetes/img/raw_data.jpg)
+    ![alt tag](https://github.com/vertcli/images/diabetes_raw_data.jpg)
 
 Usage
 -----------------------
@@ -31,7 +31,7 @@ Usage
 * If you are not already into pima_indians_onset_of_diabetes folder get into it. Also, make sure you have pima_indians_onset_of_diabetes environment active.
 * Run `python diabetes_process_data.py` normalize and center the dataset.
     * This will create `processed_data.csv` in the `data` folder. The data will look like:
-    ![alt tag](https://github.com/vertcli/machine_learning/blob/master/pima_indians_onset_of_diabetes/img/processed_data.jpg)    
+    ![alt tag](https://github.com/vertcli/images/diabetes_processed_data.jpg)    
 * Run `python diabetes_pca.py`.
     * This will show up the variance of each feature in the new space. In this case our data has significant variance on several directions. 
     * A second plot will show the projection of the dataset over the two most relevant directions.
