@@ -83,4 +83,3 @@ plt.show()
 figure.savefig("img/logistic_regression_c_vs_accuracy.png")
 
 print('Done!')
-
