@@ -12,7 +12,7 @@ At this point we know some caracteristics of our dataset (i.e. two classes, more
 Projects
 --------
 
-This portfolio is made of several ML mini-projects with the aim to show my skills on this field. All the datasets are from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.html) where you can find up to 351 open datasets. The first project is called [Glass Identification Classification](https://github.com/vertcli/machine_learning/glass_identification_classification), which is based on the dataset with the same name.
+This portfolio is made of several ML mini-projects with the aim to show my skills on this field. All the datasets are from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.html) where you can find up to 351 open datasets. The first project is called [Glass Identification Classification](https://github.com/vertcli/machine_learning/tree/master/glass_identification_classification), which is based on the dataset with the same name.
 
 
 
